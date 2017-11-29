@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 529032017}
   - component: {fileID: 529032016}
   - component: {fileID: 529032022}
+  - component: {fileID: 529032023}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -693,6 +694,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpVelocity: 5
   onGround: 0
+--- !u!114 &529032023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529032015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fd1fc505330a747878deb0b090c927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 603089576}
+  damageImage: {fileID: 2018180327}
+  deathClip: {fileID: 8300000, guid: 489d1069cd7f3624bb5270f5f6a11a73, type: 3}
+  flashSpeed: 2.5
+  flashColour: {r: 0.09365973, g: 0.006812283, b: 0.102941155, a: 0.472}
 --- !u!1 &550233300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,6 +1365,19 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 100072, guid: 7b69ef89d90425146a97292d2c680b25, type: 3}
   m_PrefabInternal: {fileID: 42544792}
+--- !u!114 &1634710231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634710230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766eeed7e7f160b49b6d738f459dd86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 0.5
+  damageCount: 10
 --- !u!4 &1634710232 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400072, guid: 7b69ef89d90425146a97292d2c680b25, type: 3}
