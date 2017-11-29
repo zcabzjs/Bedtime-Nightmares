@@ -70,7 +70,8 @@ GameObject:
   - component: {fileID: 54594711889480018}
   - component: {fileID: 82601664047947958}
   - component: {fileID: 136222343823063470}
-  - component: {fileID: 114847441724462242}
+  - component: {fileID: 114182728371016538}
+  - component: {fileID: 114304226808035366}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -111,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992082127033506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0.5, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4731492022998800}
@@ -141,12 +142,12 @@ Rigidbody:
   m_GameObject: {fileID: 1992082127033506}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: Infinity
+  m_Drag: 1
   m_AngularDrag: Infinity
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!82 &82601664047947958
 AudioSource:
@@ -157,7 +158,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9922a12f34d0a084aab32de985459723, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 52cf5644c848dd84d8a0a135a69646e4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -236,8 +237,8 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992082127033506}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0a3eff97846b17a4ab77d5ec3a47bd95, type: 2}
+  m_Avatar: {fileID: 9000000, guid: a1ec2b609041ca54897c618469ac0d2e, type: 3}
+  m_Controller: {fileID: 9100000, guid: c73e3155b76ccda46ac54d8116f467fb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,7 +246,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114847441724462242
+--- !u!114 &114182728371016538
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -253,10 +254,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1992082127033506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec45203ae7a1a54c9d02c355f983833, type: 3}
+  m_Script: {fileID: 11500000, guid: 578401ed7416c204eabbb4b0a480a6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  walking: 0
+--- !u!114 &114304226808035366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992082127033506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb73de4bb77a624f975564ba309d4b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpVelocity: 5
+  onGround: 0
 --- !u!136 &136222343823063470
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -284,7 +299,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3ea44298aa419344dbdcf87dd1a50533, type: 2}
+  - {fileID: 2100000, guid: c080be06c3e11634b864215a8729c91a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -308,7 +323,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300002, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+  m_Mesh: {fileID: 4300002, guid: a1ec2b609041ca54897c618469ac0d2e, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
@@ -330,7 +345,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5afa4a01a731c834d9a62da55c7cfa7c, type: 2}
+  - {fileID: 2100000, guid: dbfa2e1fe3eb42848b5194be03997a3b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -354,7 +369,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a1ec2b609041ca54897c618469ac0d2e, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
