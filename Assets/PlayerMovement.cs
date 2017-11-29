@@ -9,14 +9,17 @@ public class PlayerMovement : MonoBehaviour {
     Vector3 movement;
     Animator anim;
     Rigidbody rb;
+    PlayerJump playerJump;
     int floorMask;
     float cameraRayLength = 100f;
+    public bool walking;
 
     void Awake()
     {
         floorMask = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        playerJump = GetComponent<PlayerJump>(); 
 
     }
 
@@ -26,8 +29,7 @@ public class PlayerMovement : MonoBehaviour {
         float vertical = Input.GetAxisRaw("Vertical");
         Move(horizontal, vertical);
         Turn();
-
-        //Animate(horizontal, vertical);
+        Animate(horizontal, vertical);
     }
 
     void Move(float h, float v)
@@ -51,9 +53,9 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    //void Animate(float h, float v)
-    //{
-    //     bool walking = h!=0f || v!=0f;
-    //     anim.setBool("IsWalking", walking);       
-    //}
+    void Animate(float h, float v)
+    {
+         walking = (h!=0f || v!=0f) && playerJump.onGround ;
+         anim.SetBool("IsWalking", walking);       
+    }
 }
