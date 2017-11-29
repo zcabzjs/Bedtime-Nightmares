@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 2589
+  controlID: 1292
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,10 +131,10 @@ MonoBehaviour:
     y: 0
     width: 900
     height: 731
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 2781
+  controlID: 1293
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 2590
+  controlID: 1267
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -513,7 +513,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 162c0000
     m_LastClickedID: 11286
-    m_ExpandedIDs: a6fbffff00000000002c0000022c00009a2c0000
+    m_ExpandedIDs: a6fbffff00000000022c00009a2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -574,18 +574,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Materials
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Materials
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\User\Documents\Try 1
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 88.25877}
-    m_SelectedIDs: d62a0000
-    m_LastClickedID: 10966
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 96270000
+    m_LastClickedID: 10134
     m_ExpandedIDs: 0000000096270000c02700006c2800007428000080280000482900004a2b0000622b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 000000005a2800002c270000a22700006227000086270000c8270000ea2900001e2800007c270000c42700008a2b0000de270000e4270000ba330000b62700004a280000062b0000c8290000ba2a00008e2a0000f42a00005e2d0000c02e0000ea2a0000e4290000e6290000c62700005e280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
