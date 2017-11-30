@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -37,7 +38,6 @@ public class PlayerMovement : MonoBehaviour {
         movement.Set(h, 0, v);
         movement = movement.normalized * speed * Time.deltaTime;
         rb.MovePosition(transform.position + movement);
-        
     }
 
     void Turn()
@@ -58,4 +58,5 @@ public class PlayerMovement : MonoBehaviour {
          walking = (h!=0f || v!=0f) && playerJump.onGround ;
          anim.SetBool("IsWalking", walking);       
     }
+
 }

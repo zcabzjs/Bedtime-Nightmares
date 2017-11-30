@@ -82,9 +82,9 @@ ModelImporter:
     400072: //RootNode
     400074: Zombunny
     4300000: Zombunny
-    7400000: Move
-    7400002: Idle
-    7400004: Death
+    7400000: ZombunnyMove
+    7400002: ZombunnyIdle
+    7400004: ZombunnyDeath
     9500000: //RootNode
     13700000: Zombunny
   externalObjects:
@@ -125,7 +125,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Move
+      name: ZombunnyMove
       takeName: Take 001
       firstFrame: 0
       lastFrame: 30
@@ -153,7 +153,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
+      name: ZombunnyIdle
       takeName: Take 001
       firstFrame: 40
       lastFrame: 280
@@ -181,7 +181,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Death
+      name: ZombunnyDeath
       takeName: Take 001
       firstFrame: 285
       lastFrame: 320
