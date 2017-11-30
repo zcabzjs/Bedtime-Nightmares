@@ -14,7 +14,8 @@ public class EnemyMovement : MonoBehaviour {
         playerHealth = player.GetComponent<PlayerHealth>();
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {

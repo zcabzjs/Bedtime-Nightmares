@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class EnemyManager : MonoBehaviour {
     public float spawnRate = 3f;
     public float spawnTime = 0.2f;
     public Transform[] spawnPoints;
+    
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("Spawn", spawnTime, spawnRate);
@@ -21,7 +23,11 @@ public class EnemyManager : MonoBehaviour {
             return;
         }
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        NavMeshHit hit;
+        NavMesh.SamplePosition(spawnPoints[spawnPointIndex].position, out hit, 1.0f, 1);
+
+        Instantiate(enemy, hit.position, Quaternion.identity).GetComponent<NavMeshAgent>().Warp(hit.position);
+
     }
 
 
