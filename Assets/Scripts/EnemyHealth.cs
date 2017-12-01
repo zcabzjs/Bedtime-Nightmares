@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyHealth : MonoBehaviour {
     public int startingHealth = 100;
     public int currentHealth;
-    public float sinkSpeed = 2.5f;
+    public float sinkSpeed = 0.5f;
     public AudioClip deathClip;
 
     Animator anim;
