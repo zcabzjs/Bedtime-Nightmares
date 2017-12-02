@@ -8,23 +8,31 @@ public class PausingGame : MonoBehaviour {
     public GameObject PauseUI;
     // Use this for initialization
     public bool isPaused;
-
+    public GameObject player;
+    PlayerMovement playerMovement;
+    PlayerHealth playerHealth;
     void Awake()
     {
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerHealth = player.GetComponent<PlayerHealth>();
         isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp("escape"))
+        if (!playerMovement.playerAtGoal && playerHealth.currentHealth > 0)
         {
-            if (!isPaused)
+            if (Input.GetKeyUp("escape"))
             {
-                Pause();
+                if (!isPaused)
+                {
+                    Pause();
+                }
+                else Resume();
             }
-            else Resume();
         }
+        
     }
 
     void Pause()

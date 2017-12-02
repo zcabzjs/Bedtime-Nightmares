@@ -7,20 +7,26 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Use this for initialization
 	public float speed = 6f;
+    GameObject goal;
     Vector3 movement;
     Animator anim;
     Rigidbody rb;
     PlayerJump playerJump;
+    PlayerHealth playerHealth;
     int floorMask;
     float cameraRayLength = 100f;
     public bool walking;
+    public bool playerAtGoal;
+    public Victory victory;
 
     void Awake()
     {
         floorMask = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        playerJump = GetComponent<PlayerJump>(); 
+        playerJump = GetComponent<PlayerJump>();
+        playerHealth = GetComponent<PlayerHealth>();
+        goal = GameObject.FindGameObjectWithTag("Goal");
 
     }
 
@@ -57,6 +63,15 @@ public class PlayerMovement : MonoBehaviour {
     {
          walking = (h!=0f || v!=0f) && playerJump.onGround ;
          anim.SetBool("IsWalking", walking);       
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == goal && playerHealth.currentHealth > 0)
+        {
+            playerAtGoal = true;
+            victory.playerVictory();
+        }    
     }
 
 }

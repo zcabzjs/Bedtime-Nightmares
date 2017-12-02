@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour {
     public float spawnRate = 3f;
     public float spawnTime = 0.2f;
     public Transform[] spawnPoints;
+    public PlayerMovement playerMovement;
     
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,7 @@ public class EnemyManager : MonoBehaviour {
 	
     void Spawn()
     {
-        if(playerHealth.currentHealth <= 0f)
+        if(playerHealth.currentHealth <= 0f || playerMovement.playerAtGoal)
         {
             return;
         }

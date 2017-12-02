@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour {
     AudioSource playerAudio;
     PlayerMovement playerMovement;
     PlayerShooting playerShooting;
+    PlayerJump playerJump;
     bool isDead;
     bool isDamaged;
 
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour {
         playerAudio = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();
         playerShooting = GetComponentInChildren<PlayerShooting>();
+        playerJump = GetComponent<PlayerJump>();
         currentHealth = startingHealth;
 	}
 	
@@ -63,5 +65,6 @@ public class PlayerHealth : MonoBehaviour {
         playerAudio.Play();
         playerMovement.enabled = false;
         playerShooting.enabled = false;
+        playerJump.enabled = false;
     }
 }
