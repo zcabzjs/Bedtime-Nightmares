@@ -8,26 +8,28 @@ public class EnemyMovement : MonoBehaviour {
     NavMeshAgent nav;
     EnemyHealth enemyHealth;
     PlayerHealth playerHealth;
-    bool playerAtGoal;
+    PlayerMovement playerMovement;
 	// Use this for initialization
 	void Awake () {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealth = player.GetComponent<PlayerHealth>();
-        playerAtGoal = player.GetComponent<PlayerMovement>().playerAtGoal;
+        playerMovement = player.GetComponent<PlayerMovement>();
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
+        
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && !playerAtGoal)
-        {
+        if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && !playerMovement.playerAtGoal)
+        {   
+            
             nav.SetDestination(player.position);
         }
         else
         {
-          nav.enabled = false;
+            nav.enabled = false;
         }
 	}
 }
