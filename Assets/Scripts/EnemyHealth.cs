@@ -52,6 +52,7 @@ public class EnemyHealth : MonoBehaviour {
     void Death()
     {
         isDead = true;
+        gameObject.layer = 0;
         capsuleCollider.isTrigger = true;
         anim.SetTrigger("IsDead");
         enemyAudio.clip = deathClip;
