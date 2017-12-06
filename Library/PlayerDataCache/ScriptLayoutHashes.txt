@@ -142,6 +142,7 @@ d600e1061db436ad3b276949ec933ad2 Assembly-CSharp.dll:.EnemyManager
 9ea29e9897d45561ac4e92c4e5f701c1 Assembly-CSharp.dll:.EnemyAttack
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ObjectResetter
+a5f37bbe4f1d7ba80c9de521bd93a1d3 Assembly-CSharp.dll:.TimeScore
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.WaterBasic
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -183,4 +184,3 @@ a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 395882969f5f3726b5b88f7bf43b75cb Assembly-CSharp.dll:.PlayerMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FPSCounter
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-a5f37bbe4f1d7ba80c9de521bd93a1d3 Assembly-CSharp.dll:.TimeScore

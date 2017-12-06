@@ -1187,7 +1187,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 571806564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.100006, y: 67.544495, z: 0}
+  m_LocalPosition: {x: 15.300003, y: 98.240005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415638635}
@@ -1195,8 +1195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 14.1, y: -65.80551}
-  m_SizeDelta: {x: 385, y: 102.2}
+  m_AnchoredPosition: {x: 15.3, y: -35.11}
+  m_SizeDelta: {x: 377.43, y: 102.2}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &571806566
 MonoBehaviour:
@@ -1219,18 +1219,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 27f279b5afd55834cbab742bb24096c3, type: 3}
-    m_FontSize: 40
+    m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 50
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nick's Nightmares
+  m_Text: Bedtime Nightmares
 --- !u!222 &571806567
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1378,7 +1378,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Help Nick escape his nightmares by finding the exit portal.
+  m_Text: 'Escape the nightmares by finding the exit portal.
 
 '
 --- !u!222 &727897645

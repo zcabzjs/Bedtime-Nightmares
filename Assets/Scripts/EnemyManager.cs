@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         difficulty = PlayerPrefs.GetInt("Difficulty", 0);
-        InvokeRepeating("Spawn", spawnTime, spawnRate - difficulty);
+        InvokeRepeating("Spawn", spawnTime, spawnRate * (float)(1 - 0.25*difficulty));
 	}
 	
     void Spawn()

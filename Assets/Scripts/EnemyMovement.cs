@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour {
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
         difficulty = PlayerPrefs.GetInt("Difficulty", 0);
-        nav.speed += difficulty;
+        nav.speed *= (float)(1 + (0.25*difficulty));
         
 
     }
