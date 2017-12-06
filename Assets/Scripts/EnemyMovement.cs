@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour {
     EnemyHealth enemyHealth;
     PlayerHealth playerHealth;
     PlayerMovement playerMovement;
+    int difficulty;
 	// Use this for initialization
 	void Awake () {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -16,6 +17,8 @@ public class EnemyMovement : MonoBehaviour {
         playerMovement = player.GetComponent<PlayerMovement>();
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
+        difficulty = PlayerPrefs.GetInt("Difficulty", 0);
+        nav.speed += difficulty;
         
 
     }

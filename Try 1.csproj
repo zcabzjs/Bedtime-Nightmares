@@ -239,6 +239,7 @@
     <Compile Include="Assets\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Scripts\QuitGame.cs" />
     <Compile Include="Assets\Scripts\RestartGame.cs" />
+    <Compile Include="Assets\Scripts\TimeScore.cs" />
     <Compile Include="Assets\Scripts\Victory.cs" />
   </ItemGroup>
   <ItemGroup>

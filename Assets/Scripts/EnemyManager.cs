@@ -11,10 +11,12 @@ public class EnemyManager : MonoBehaviour {
     public float spawnTime = 0.2f;
     public Transform[] spawnPoints;
     public PlayerMovement playerMovement;
+    int difficulty;
     
 	// Use this for initialization
 	void Start () {
-        InvokeRepeating("Spawn", spawnTime, spawnRate);
+        difficulty = PlayerPrefs.GetInt("Difficulty", 0);
+        InvokeRepeating("Spawn", spawnTime, spawnRate - difficulty);
 	}
 	
     void Spawn()
