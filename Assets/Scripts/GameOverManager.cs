@@ -6,20 +6,22 @@ public class GameOverManager : MonoBehaviour {
 
     Animator anim;
     public PlayerHealth playerHealth;
-    public GameObject GameOverUI;
+    public GameObject MainUI;
+    GameObject GameOverUI;
 	// Use this for initialization
 	void Awake () {
         
-		anim = GameOverUI.GetComponent<Animator>(); // Get animator
-        
+		anim = MainUI.GetComponent<Animator>(); // Get animator
+        GameOverUI = GameObject.FindGameObjectWithTag("GameOverUI");
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(playerHealth.currentHealth <= 0)
         {
-            GameOverUI.SetActive(true);
             anim.SetTrigger("GameOver");
+            Debug.Log("Game Over");
         }
 	}
 }

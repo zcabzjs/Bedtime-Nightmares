@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Terrain
   - Goal
+  - HealthUI
+  - PauseUI
+  - VictoryUI
+  - GameOverUI
   layers:
   - Default
   - TransparentFX

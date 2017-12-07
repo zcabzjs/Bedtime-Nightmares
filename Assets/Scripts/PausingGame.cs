@@ -11,6 +11,7 @@ public class PausingGame : MonoBehaviour {
     public GameObject player;
     PlayerMovement playerMovement;
     PlayerHealth playerHealth;
+    public AudioSource backgroundAudio;
     void Awake()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
@@ -38,6 +39,7 @@ public class PausingGame : MonoBehaviour {
     void Pause()
     {
         Time.timeScale = 0f;
+        backgroundAudio.Pause();
         PauseUI.SetActive(true);
         isPaused = true;
     }
@@ -45,6 +47,7 @@ public class PausingGame : MonoBehaviour {
     public void Resume()
     {
         PauseUI.SetActive(false);
+        backgroundAudio.Play();
         Time.timeScale = 1f;
         isPaused = false;
     }

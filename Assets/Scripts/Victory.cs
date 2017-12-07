@@ -30,7 +30,6 @@ public class Victory : MonoBehaviour {
         playerJump.enabled = false;
         Debug.Log("Won");
         overallTime = Time.timeSinceLevelLoad;
-        victoryUI.SetActive(true);
         anim.SetTrigger("PlayerVictory");
      
 
