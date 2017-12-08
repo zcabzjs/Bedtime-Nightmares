@@ -11,6 +11,7 @@ public class PlayerShooting : MonoBehaviour {
     Ray shootRay = new Ray();
     RaycastHit shootHit;
     int shootableMask;
+    int terrainMask;
     ParticleSystem gunParticles;
     LineRenderer gunLine;
     AudioSource gunAudio;
@@ -20,6 +21,7 @@ public class PlayerShooting : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         shootableMask = LayerMask.GetMask("Shootable");
+        terrainMask = LayerMask.GetMask("Terrain");
         gunParticles = GetComponent<ParticleSystem>();
         gunLine = GetComponent<LineRenderer>();
         gunAudio = GetComponent<AudioSource>();
@@ -66,6 +68,10 @@ public class PlayerShooting : MonoBehaviour {
             {
                 enemyHealth.TakeDamage(damagePerShot, shootHit.point);
             }
+            gunLine.SetPosition(1, shootHit.point);
+        }
+        else if(Physics.Raycast(shootRay, out shootHit, range, terrainMask))
+        {
             gunLine.SetPosition(1, shootHit.point);
         }
         else
